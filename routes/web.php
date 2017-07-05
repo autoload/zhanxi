@@ -21,9 +21,7 @@ Route::get('/', function () {
 Route::get('tasks','TasksController@index');
 Route::get('tasks/{task}','TasksController@show');
 
-Route::get('now',function (){
-    return date('Y-m-d H:i:s');
-});
+Route::any('uploads/upload','UploadsController@upload');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

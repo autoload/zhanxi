@@ -91,6 +91,7 @@ class NewsController extends Controller
 
             $form->display('id', 'ID');
             $form->text('title', '标题');
+            $form->image('image');
             $form->editor('content');
 
             $form->display('created_at', 'Created At');

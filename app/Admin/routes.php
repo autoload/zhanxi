@@ -12,6 +12,7 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
     $router->get('info', 'InfoController@index');
+    $router->any('upload', 'uploadController@index');
     $router->resource('users', UserController::class);
     $router->resource('news', NewsController::class);
 });

@@ -21,7 +21,11 @@ class WangEditor extends Field
         $this->script = <<<EOT
 
 var editor = new wangEditor('{$this->id}');
-    editor.create();
+   
+        
+        editor.config.uploadImgUrl = '/uploads/upload';
+        editor.config.uploadImgFileName = 'picture';
+        editor.create();
 
 EOT;
         return parent::render();
